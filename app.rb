@@ -2,7 +2,15 @@ require "json"
 require "cuba"
 require "mote"
 require "mote/render"
+require "pry"
 
+react_loader = "if (typeof(Opal) !== 'undefined') {" \
+    'Opal.mark_as_loaded("opal");' \
+    'Opal.mark_as_loaded("corelib/runtime.self");' \
+    'Opal.mark_as_loaded("jquery.self");' \
+    'Opal.mark_as_loaded("sources/react.self");' \
+    'Opal.load("reacting");' \
+"}"
 
 def get_algorithm(type)
   algorithms = {
@@ -21,6 +29,13 @@ end
 Cuba.plugin(Mote::Render)
 
 Cuba.define do
+  @g = {
+    'react_loader' => react_loader
+  }
+  def get_attr(attr)
+    globals = self.instance_variable_get("@g")
+    globals[attr]
+  end
 
   # Get requests:
   on get do
