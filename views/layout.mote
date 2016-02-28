@@ -5,9 +5,8 @@
     <script>{{ app.get_attr('react_loader') }}</script>
   </head>
   <body>
-    <div id="content">
+    <div id="layout">
       {{ content }}
     </div>
-  </body>
   </body>
 </html>

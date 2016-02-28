@@ -1,9 +1,7 @@
-module Week
-   FIRST_DAY = "Sunday"
-   def Week.weeks_in_month
-      puts "You have four weeks in a month"
-   end
-   def Week.weeks_in_year
-      puts "You have 52 weeks in a year"
-   end
+module CubaHelpers
+  def raise404()
+      res.status = 404
+      res.write view("404")
+      halt(res.finish)
+  end
 end
