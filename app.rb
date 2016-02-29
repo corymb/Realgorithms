@@ -8,7 +8,6 @@ require_relative "cuba_helpers"
 require_relative "react_helpers"
 require_relative "algorithms"
 
-
 Cuba.plugin(Mote::Render)
 Cuba.plugin(CubaHelpers)
 Cuba.plugin(ReactHelpers)
@@ -26,22 +25,18 @@ Cuba.define do
   @g = {
     'react_loader' => react_loader
   }
-  def get_attr(attr)
-    globals = self.instance_variable_get("@g")
-    globals[attr]
-  end
-
   # Get requests:
   on get do
     on root do
-      res.write view("home")
+      algorithm = get_algorithm(:insertionsort)
+      algorithm_code = { code: algorithm }
+      res.write view("home", {'insertion_sort' => algorithm_code})
     end
 
     on 'algorithm/:type' do | type |
       algorithm = get_algorithm(type.to_sym)
       algorithm_code = { code: algorithm }
-      res.headers["Content-Type"] = "application/json; charset=utf-8"
-      res.write algorithm_code.to_json
+      to_json algorithm_code
     end
   end
 end
