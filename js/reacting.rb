@@ -6,7 +6,7 @@ require 'reactive-ruby'
 class HelloWorld
 	include React::Component
 	def render
-		h1 { "Hello World! "}
+		h1 {"Insertion Sort"}
 	end
 end
 
