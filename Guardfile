@@ -1,5 +1,5 @@
 guard :shell do
-  watch /.*.rb/ do |m|
-    `ruby tests.rb`
+  watch /.*.rb/ do
+    `rake test`
   end
 end
