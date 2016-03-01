@@ -1,15 +1,38 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.4.0)
     byebug (8.2.2)
+    capybara (2.6.2)
+      addressable
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    childprocess (0.5.9)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.1)
     concurrent-ruby (1.0.0)
     cuba (3.5.0)
       rack (~> 1.6.0)
+    ffi (1.9.10)
     hike (1.2.3)
     method_source (0.8.2)
+    mime-types (3.0)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0221)
+    mini_portile2 (2.0.0)
+    minitest (5.8.4)
+    minitest-capybara (0.8.2)
+      capybara (~> 2.2)
+      minitest (~> 5.0)
+      rake
     mote (1.1.4)
     mote-render (1.1.0)
+    multi_json (1.11.2)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
     opal (0.8.0)
       hike (~> 1.2)
       sourcemap (~> 0.1.0)
@@ -33,28 +56,40 @@ GEM
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.5.0)
     reactive-ruby (0.7.40)
       opal (= 0.8.0)
       opal-activesupport (>= 0.2.0)
       opal-browser (= 0.2.0)
+    rubyzip (1.2.0)
+    selenium-webdriver (2.52.0)
+      childprocess (~> 0.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
     slop (3.6.0)
     sourcemap (0.1.1)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     tilt (2.0.2)
+    websocket (1.2.2)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   cuba
+  minitest-capybara
   mote
   mote-render
   opal-jquery
   pry-byebug
   rack-test
   reactive-ruby
+  selenium-webdriver
 
 BUNDLED WITH
    1.11.2

@@ -8,4 +8,6 @@ gem 'reactive-ruby'
 group :development, :test do
   gem 'pry-byebug'
   gem 'rack-test'
+  gem 'minitest-capybara'
+  gem 'selenium-webdriver'
 end
