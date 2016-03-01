@@ -6,3 +6,6 @@ gem "opal-jquery"
 gem 'reactive-ruby'
 gem 'pry-byebug'
 gem 'rack-test'
+gem 'guard-rake'
+gem 'guard-shell'
+gem 'minitest'
