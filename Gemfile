@@ -4,5 +4,8 @@ gem "mote"
 gem "mote-render"
 gem "opal-jquery"
 gem 'reactive-ruby'
-gem 'pry-byebug'
-gem 'rack-test'
+
+group :development, :test do
+  gem 'pry-byebug'
+  gem 'rack-test'
+end
