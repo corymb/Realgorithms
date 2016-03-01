@@ -1,10 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    byebug (8.2.2)
+    coderay (1.1.1)
     concurrent-ruby (1.0.0)
     cuba (3.5.0)
       rack (~> 1.6.0)
     hike (1.2.3)
+    method_source (0.8.2)
     mote (1.1.4)
     mote-render (1.1.0)
     opal (0.8.0)
@@ -20,11 +23,21 @@ GEM
     opal-jquery (0.4.1)
       opal (>= 0.7.0, < 0.10.0)
     paggio (0.2.6)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.3.0)
+      byebug (~> 8.0)
+      pry (~> 0.10)
     rack (1.6.4)
+    rack-test (0.6.3)
+      rack (>= 1.0)
     reactive-ruby (0.7.40)
       opal (= 0.8.0)
       opal-activesupport (>= 0.2.0)
       opal-browser (= 0.2.0)
+    slop (3.6.0)
     sourcemap (0.1.1)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -38,8 +51,9 @@ DEPENDENCIES
   cuba
   mote
   mote-render
-  opal
   opal-jquery
+  pry-byebug
+  rack-test
   reactive-ruby
 
 BUNDLED WITH
