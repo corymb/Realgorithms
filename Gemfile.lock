@@ -94,6 +94,7 @@ PLATFORMS
 
 DEPENDENCIES
   cuba
+  debug_inspector
   minitest-capybara
   mote
   mote-render

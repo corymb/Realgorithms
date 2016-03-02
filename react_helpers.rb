@@ -1,13 +1,11 @@
-module ReactHelpers
+require 'opal'
 
+module ReactHelpers
   def loader
-    "if (typeof(Opal) !== 'undefined') {" \
-      'Opal.mark_as_loaded("opal");' \
-      'Opal.mark_as_loaded("corelib/runtime.self");' \
-      'Opal.mark_as_loaded("jquery.self");' \
-      'Opal.mark_as_loaded("sources/react.self");' \
-      'Opal.load("reacting");' \
-      "}"
+    opal = Opal::Server.new {|s|
+      s.append_path 'js'
+      s.main = 'app'
+    }
+    opal_boot_code = Opal::Processor.load_asset_code(opal.sprockets, 'reacting')
   end
-  
 end

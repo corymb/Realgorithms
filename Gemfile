@@ -10,6 +10,7 @@ group :development, :test do
   gem 'minitest-capybara'
   gem 'selenium-webdriver'
   gem 'pry-byebug' #debugger
+  gem 'debug_inspector'
   gem 'pry-stack_explorer' #navigate the call stack and frames
   gem 'pry-rescue' #catch unhandled exception in pry  
   gem 'shotgun' #automatic rackup reloading 
