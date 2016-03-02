@@ -1,5 +1,5 @@
 guard :shell do
   watch /.*.rb/ do
-    `rake test`
+    `rake test:integration`
   end
 end
