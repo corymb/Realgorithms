@@ -2,7 +2,7 @@
 <html>
   <head>
     <script src="/assets/reacting.js"></script>
-    <script>{{ app.get_attr('react_loader') }}</script>
+    <script>{{ app.loader }}</script>
   </head>
   <body>
     <div id="layout">

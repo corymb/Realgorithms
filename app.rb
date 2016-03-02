@@ -13,18 +13,10 @@ Cuba.plugin(CubaHelpers)
 Cuba.plugin(ReactHelpers)
 Cuba.plugin(Helpers)
 
-react_loader = "if (typeof(Opal) !== 'undefined') {" \
-    'Opal.mark_as_loaded("opal");' \
-    'Opal.mark_as_loaded("corelib/runtime.self");' \
-    'Opal.mark_as_loaded("jquery.self");' \
-    'Opal.mark_as_loaded("sources/react.self");' \
-    'Opal.load("reacting");' \
-"}"
+
 
 Cuba.define do
-  @g = {
-    'react_loader' => react_loader
-  }
+
   # Get requests:
   on get do
     on root do
