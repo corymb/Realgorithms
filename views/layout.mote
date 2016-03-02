@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <script src="/assets/reacting.js"></script>
+    <script src="/assets/react.js"></script>
     <script>{{ app.loader }}</script>
   </head>
   <body>
