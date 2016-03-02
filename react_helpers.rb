@@ -6,6 +6,6 @@ module ReactHelpers
       s.append_path 'js'
       s.main = 'app'
     }
-    opal_boot_code = Opal::Processor.load_asset_code(opal.sprockets, 'reacting')
+    opal_boot_code = Opal::Processor.load_asset_code(opal.sprockets, 'react')
   end
 end
