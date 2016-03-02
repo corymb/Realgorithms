@@ -13,10 +13,7 @@ Cuba.plugin(CubaHelpers)
 Cuba.plugin(ReactHelpers)
 Cuba.plugin(Helpers)
 
-
-
 Cuba.define do
-
   # Get requests:
   on get do
     on root do
